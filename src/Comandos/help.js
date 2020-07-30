@@ -10,5 +10,6 @@ const execute = (LarA, message, args) => {
 }
 module.exports = {
     name: "help",
+    help: "Mostra todos os comandos e seus usos",
     execute
 }

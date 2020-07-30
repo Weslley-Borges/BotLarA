@@ -38,7 +38,8 @@ $ npm run test
 - **Frontend**
   - [Discord](https://Discord.com/) - To view the results
 ## 5. Features
-- Search and play musics in YouTube, and functionalities (pause, resume, skip, stop)
+- Search and play musics in YouTube, and functionalities (pause, resume, skip, stop) (upgrading)
+- Moderation system, with advise. (building)
 # Contribute
 You can contribute for the repository,I'll be glad to analyse and accept them! And if you have any question about the project...
 - E-mail: weslley15bs@gmail.com

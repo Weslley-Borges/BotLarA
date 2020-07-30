@@ -1,4 +1,4 @@
-☐ Reprodução de músicas
+✔ Reprodução de músicas @done (30/07/2020 10:28:58)
 ☐ Sistema de moderação
 ☐ Votações
 
@@ -18,7 +18,8 @@
 
 ☐ Banco de dados (biblioteca da comunidade), contendo:
     ☐ Nome do arquivo, endereço, classificação
-    ☐ página com feedbacks.
+    ☐ Um comandos específico para dar uma classificação de 0 a 10
     ☐ Recomendações de links e arquivos com base nos conteúdos acessados
+    ☐ Uma vez por semana, vai verificar se existem links com menos de 3.5 de classificação, essses itens serão excluidos
 
-
+☐ Um sistema fora da LarA para visualizar todos esses dados e manipulá-los
