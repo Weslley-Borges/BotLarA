@@ -1,4 +1,5 @@
 const Regras = require("./regras").execute
+
 const execute = (LarA, message) => {
     var conteudo = message.content
     let mensagem = message.content
@@ -17,7 +18,21 @@ const execute = (LarA, message) => {
         UPPERMessage = true
     }
     let crimes = [encurtador, UPPERMessage]
-    Regras(LarA, message, crimes)
+    Aviso(LarA, message, crimes)
+}
+function Aviso(LarA, message, crimes){
+    var aviso = `Olá, eu percebi que você teve alguns comportamentos que não são aceitados na comunidade\n`
+    var soluções = `O que você poderia fazer:\n`
+    for(crime in crimes){
+        if(UPPERMessage){
+            aviso += `-Você utilizou demais o Capslock, isso pode irritar alguns membros\n`
+            soluções = `-Utilizar menos Capslock, eles não podem ser mais que 50% dos caracteres\n`
+        }else if (encurtador){
+            aviso += `-Você enviou links possuindo encurtadores, esses links podem afetar o dispositivo dos usários, implantando malwares\n`
+            soluções = `-Não enviar nenhum encurtador, se possível, envie o link inteiro\n`
+        }
+    }
+    message.author.send(aviso+soluções)
 }
 
 module.exports = {name: "moderate", execute}
