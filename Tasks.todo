@@ -1,0 +1,24 @@
+☐ Reprodução de músicas
+☐ Sistema de moderação
+☐ Votações
+
+☐ Banco de dados (usuários) contendo:
+    ☐ id usuário Nome,email,github,linguagens, descrição,reputação
+    ☐ Comandos para poder alterar dados à qualquer hora (A reputação já é automática, ela zera a cada mês)
+    ☐ Página web para ver os dados em tempo real
+
+☐ Um 'tinder' entre os programadores, com base nos dados dos usuários
+☐ Sistema de Live Coding e Hackatons
+☐ Conteúdos separados por cargo
+    
+☐ Site da comunidade
+    ☐ Página principal com animações, descrição da comunidade, botão com o convite para o servidor, etc 
+    ☐ Todos os projetos criados (com link do repositório no github ou acesso ao conteúdo).
+    ☐ Página com os principais membros(baseado em reputação)
+
+☐ Banco de dados (biblioteca da comunidade), contendo:
+    ☐ Nome do arquivo, endereço, classificação
+    ☐ página com feedbacks.
+    ☐ Recomendações de links e arquivos com base nos conteúdos acessados
+
+
