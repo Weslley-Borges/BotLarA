@@ -28,13 +28,13 @@ LarA.on("ready", () => {
     LarA.user.setActivity(`temos ${LarA.users.cache.size} usuários.`)})
 //When a new member joined
 LarA.on("guildMemberAdd",member => {
-    LarA.reply(`${member.nickname}\n
+    LarA.reply(`\n@${member.nickname}\n
     Seja bem-vindo(a) ao servidor da Upping Devs.
-    Nós criamos essa comunidade para reunir as experiências e habilidades de vários programadores,sejam iniciantes, júnior, pleno ou senior,
-    aqui você vai ter acesso à vários links que podem ser úteis para você, como também poderá construir um network com os membros.
-    Para começar, você deve ir até o canal "apresentações" para se apresentar para o resto do servidor.
-    Contribua com o projeto do nosso sistema em: https://github.com/Weslley-Borges/LarA`)
-    LarA.user.setActivity(`temos ${LarA.users.cache.size} usuários neste servidor.`)})
+    Nós criamos essa comunidade para reunir as experiências e habilidades de vários programadores, sem distinção.
+    Aqui você terá acesso a vários links que podem ser úteis para você, etambém poderá construir um network com os membros.
+    Para começar, que tal você olhar os nossos comandos? digite !help .\n
+    Contribua com o projeto do nosso sistema em: https://github.com/Weslley-Borges/BOTLarA`)
+    LarA.user.setActivity(`temos ${LarA.users.cache.size} usuários.`)})
 
 
 
@@ -46,8 +46,8 @@ LarA.on("message", async message => {
         const args = message.content.slice(config.prefix.length).split(" ")
         const command = args.shift()
         //Procura o comando na pasta "Comandos",
-        //e se encontrar, vai executá-lo, senão,
-        //vai mandar uma mensagem de erro.
+        //se encontrar, vai executá-lo, senão,
+        //manda uma mensagem de erro.
         try{
             LarA.commands.get(command).execute(LarA, message, args)
         }catch(e){
@@ -58,7 +58,7 @@ LarA.on("message", async message => {
         try{
             LarA.systems.get("moderate").execute(LarA, message)
         }catch(e){
-            message.reply("houve um erro no sistema :(")
+            message.reply("houve um erro no sistema, poderia chamar alguns administrador ou responsável pelo projeto para consertar?")
             console.log("Houve um erro:\n",e)}
     }
 })
