@@ -14,7 +14,6 @@ const CommandFiles = fs
 for(filename of CommandFiles){
     const command = require(`./Comandos/${filename}`)
     LarA.commands.set(command.name, command)}
-
 const SystemFiles = fs
     .readdirSync(path.join(__dirname,"./Sistema"))
     .filter(filename => filename.endsWith(".js") )

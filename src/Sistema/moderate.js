@@ -1,6 +1,7 @@
+const MessageEmbed = require("discord.js").MessageEmbed
 const execute = (LarA, message) => {
     var conteudo = message.content
-    let mensagem = message.join(" ")
+    let mensagem = message.content.split('').join(" ")
     var charNumber = 0
     var charUPPER = 0
     var encurtador = false
@@ -13,7 +14,7 @@ const execute = (LarA, message) => {
         if (!isNaN(letra * 1)){charNumber ++
         }else if (letra == letra.toUpperCase())charUPPER ++ 
     })
-    if(charUPPER >= (50/100)*(mensagem.length - charNumber))UPPERMessage = true
+    if(charUPPER >= (50/100)*(mensagem.length - charNumber) && charNumber > 5)UPPERMessage = true
 
     //Adiciona esses resultados em um array
     let crimes = [encurtador, UPPERMessage]
@@ -22,7 +23,7 @@ const execute = (LarA, message) => {
     //se algum dos valores forem verdadeiros
 
     var aviso = `Olá, eu percebi que você teve alguns comportamentos que não são aceitos na comunidade:\n`
-    var soluções = `O que você poderia fazer:\n`
+    var soluções = `\n**O que você poderia fazer:**\n`
 
     for(crime in crimes){
         if(!UPPERMessage && !encurtador){
@@ -40,7 +41,16 @@ const execute = (LarA, message) => {
                 msg = `-Não enviar nenhum encurtador, se possível, envie o link inteiro\n`
                 if(antiRepeat(soluções,msg))soluções += msg
             }
-            message.author.send(aviso+soluções)
+            const embed = new MessageEmbed()
+            .setAuthor(
+                "LarA",
+                `https://cdn.discordapp.com/icons/${message.guild.id}/${message.guild.icon}.png`,
+                'https://github.com/Weslley-Borges/BOTLarA')
+            .setThumbnail(`https://cdn.discordapp.com/icons/${message.guild.id}/${message.guild.icon}.png`)
+            .setTitle('Aviso da moderação')
+            .setColor('#0664c9')
+            .setDescription(aviso+soluções);
+            message.author.send(embed);
         }
     }
 }
@@ -50,7 +60,6 @@ function antiRepeat(mensagem,frase){
     if(!mensagem.includes(frase)){
         return true
     }
-    console.log("erro")
 }
 
 module.exports = {name: "moderate", execute}

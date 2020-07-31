@@ -5,7 +5,7 @@ const execute = (bot, message, args) => {
     if(args != ''){
         bot.commands.forEach( command => {
             if(command.help){
-                msg += `__**${command.name}**__: ${command.help}\n`
+                msg += `__**${command.name}**__: ${command.help}\n\n`
             }
         })
     }else{

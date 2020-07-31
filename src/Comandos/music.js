@@ -46,7 +46,7 @@ const Playsong = async (bot, message, song) => {
         queue.songs.push(song)
         bot.queues.set(message.guild.id, queue)
     }
-    let msg = "**|=|=|= Playlist =|=|=|**\n\n"
+    let msg = "\n**---- Playlist ----**\n\n"
     queue.songs.forEach( music => {
         msg += `__**${music.title}**__\n`
     })
