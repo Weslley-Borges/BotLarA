@@ -1,4 +1,4 @@
-const execute = (LarA,message) => {
+const execute = (bot,message) => {
 
 }
 module.exports = {

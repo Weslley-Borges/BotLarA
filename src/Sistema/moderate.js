@@ -22,7 +22,7 @@ const execute = (LarA, message) => {
     //Vai criar um aviso para o usuário, que só será enviado
     //se algum dos valores forem verdadeiros
 
-    var aviso = `Olá, eu percebi que você teve alguns comportamentos que não são aceitos na comunidade:\n`
+    var aviso = `Olá, eu percebi que você teve alguns comportamentos que não são aceitos na comunidade:\n\n`
     var soluções = `\n**O que você poderia fazer:**\n`
 
     for(crime in crimes){
