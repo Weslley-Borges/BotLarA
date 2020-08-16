@@ -9,7 +9,6 @@ You can **fork** the repository or:
 **Clone the repository**
 ```
 $ git clone https://github.com/Weslley-Borges/LarA/
-$ cd mindcast-server
 ```
 **Installing dependences**
 ```
