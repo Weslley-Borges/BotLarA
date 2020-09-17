@@ -50,6 +50,7 @@ const Playsong = async (bot, message, song) => {
     queue.songs.forEach( music => {
         msg += `__**${music.title}**__\n`
     })
+    LarA.user.setActivity("Tocando música")
     message.reply(msg)    
 }
 // Outros comandos
@@ -66,7 +67,8 @@ function Stop(bot, message){
     if(!queue)return message.reply("não existe nenhuma música em reprodução")
     queue.songs = []
     bot.queues.set(message.guild.id, queue)
-    queue.dispatcher.end()}
+    queue.dispatcher.end()
+    LarA.user.setActivity(`temos ${LarA.users.cache.size} usuários.`)}
 function Skip(bot, message){
     const queue = bot.queues.get(message.guild.id)
     if(!queue)return message.reply("não existe nenhuma música em reprodução")

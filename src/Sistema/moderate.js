@@ -1,5 +1,5 @@
 const MessageEmbed = require("discord.js").MessageEmbed
-const execute = (LarA, message) => {
+const execute = (bot, message) => {
     var conteudo = message.content
     let mensagem = message.content.split('').join(" ")
     var charNumber = 0
@@ -42,14 +42,14 @@ const execute = (LarA, message) => {
                 if(antiRepeat(soluções,msg))soluções += msg
             }
             const embed = new MessageEmbed()
-            .setAuthor(
-                "LarA",
-                `https://cdn.discordapp.com/icons/${message.guild.id}/${message.guild.icon}.png`,
-                'https://github.com/Weslley-Borges/BOTLarA')
-            .setThumbnail(`https://cdn.discordapp.com/icons/${message.guild.id}/${message.guild.icon}.png`)
-            .setTitle('Aviso da moderação')
-            .setColor('#0664c9')
-            .setDescription(aviso+soluções);
+                .setAuthor(
+                    "LarA",
+                    `https://cdn.discordapp.com/icons/${message.guild.id}/${message.guild.icon}.png`,
+                    'https://github.com/Weslley-Borges/BOTLarA')
+                .setThumbnail(`https://cdn.discordapp.com/icons/${message.guild.id}/${message.guild.icon}.png`)
+                .setTitle('Aviso da moderação')
+                .setColor('#0664c9')
+                .setDescription(aviso+soluções);
             message.author.send(embed);
         }
     }

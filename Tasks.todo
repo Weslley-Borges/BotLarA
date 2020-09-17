@@ -3,9 +3,8 @@
 ☐ Votações
 
 ☐ Banco de dados (usuários) contendo:
-    ☐ id usuário Nome,email,github,linguagens, descrição,reputação,infrações
+    ☐ id usuário Nome,email,github,linguagens, descrição,reputação
     ☐ Comandos para poder alterar dados à qualquer hora (A reputação já é automática, ela zera a cada mês)
-    ☐ Página web para ver os dados em tempo real
 
 ☐ Um 'tinder' entre os programadores, com base nos dados dos usuários
 ☐ Sistema de Live Coding e Hackatons
